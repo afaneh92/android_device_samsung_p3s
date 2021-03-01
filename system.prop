@@ -1,0 +1,8 @@
+ro.display.series=Samsung S21 Ultra 5G
+ro.product.board=exynos2100
+ro.board.platform=universal2100_r
+sys.usb.controller=10e00000.usb
+ro.boot.usbcontroller=10e00000.usb
+ro.boot.dynamic_partitions=true
+#fbe.metadata.wrappedkey=true
+ro.boot.boot_devices=13100000.ufs

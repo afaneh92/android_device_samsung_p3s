@@ -1,0 +1,58 @@
+# Copyright (c) 2017-2018, The Linux Foundation. All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are met:
+#     * Redistributions of source code must retain the above copyright
+#       notice, this list of conditions and the following disclaimer.
+#     * Redistributions in binary form must reproduce the above copyright
+#       notice, this list of conditions and the following disclaimer in the
+#       documentation and/or other materials provided with the distribution.
+#     * Neither the name of The Linux Foundation nor
+#       the names of its contributors may be used to endorse or promote
+#       products derived from this software without specific prior written
+#       permission.
+#
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+# AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+# IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+# NON-INFRINGEMENT ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR
+# CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+# EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+# PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+# OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+# WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+# OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
+# ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#
+
+on late-init
+    setprop sys.usb.controller 10e00000.usb
+    setprop ro.debuggable 1
+    setprop service.adb.root 1
+    setprop sys.usb.configfs 1
+    setprop sys.usb.config adb
+
+on init
+    write /proc/sys/kernel/hung_task_timeout_secs 0
+    start watchdogd
+
+# to cut charging battery path
+    write /sys/class/power_supply/battery/siop_level 0
+
+on boot
+    setprop ro.boot.vbmeta.avb_version 1.1
+    setprop ro.boot.avb_version 1.1
+
+on fs
+    wait /dev/block/platform/13100000.ufs
+    symlink /dev/block/platform/13100000.ufs /dev/block/bootdevice
+    symlink /dev/block/platform/13100000.ufs/by-name /dev/block/by-name
+    symlink /dev/block/platform/13100000.ufs/by-name/param /dev/block/param
+
+    export ANDROID_ROOT /system_root
+
+# Set watchdog timer to 40 seconds and pet it every 10 seconds to get a 30 second margin
+service watchdogd /system/bin/watchdogd 10 30
+    class core
+    oneshot
+    seclabel u:r:watchdogd:s0
