@@ -55,5 +55,5 @@ odm							/odm		ext4	ro,barrier=1,discard	avb,logical,first_stage_mount
 /dev/block/platform/13100000.ufs/by-name/prism		/prism		ext4	defaults		recoveryonly
 /dev/block/platform/13100000.ufs/by-name/optics		/optics		ext4	defaults		recoveryonly
 /dev/block/platform/13100000.ufs/by-name/vbmeta_system	/vbmeta_system	emmc	defaults		recoveryonly
-#/dev/block/platform/13100000.ufs/by-name/vendor_boot	/vendor_boot	emmc	defaults		recoveryonly
+/dev/block/platform/13100000.ufs/by-name/vendor_boot	/vendor_boot	emmc	defaults		recoveryonly
 /dev/block/platform/13100000.ufs/by-name/vbmeta_samsung	/vbmeta_samsung	emmc	defaults		recoveryonly

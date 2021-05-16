@@ -15,6 +15,6 @@
 #
 
 PRODUCT_MAKEFILES := \
-	$(LOCAL_DIR)/omni_p3s.mk
+	$(LOCAL_DIR)/twrp_p3s.mk
 
-COMMON_LUNCH_CHOICES := omni_p3s-eng
+COMMON_LUNCH_CHOICES := twrp_p3s-eng

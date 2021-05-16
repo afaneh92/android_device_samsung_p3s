@@ -22,7 +22,7 @@ odm		/odm		ext4
 /prism		ext4		/dev/block/platform/13100000.ufs/by-name/prism			flags=backup=1;display="Prism"
 /prism_image	emmc		/dev/block/platform/13100000.ufs/by-name/prism			flags=backup=1;flashimg;display="Prism Image"
 /vbmeta_system	emmc		/dev/block/platform/13100000.ufs/by-name/vbmeta_system
-#/vendor_boot	emmc		/dev/block/platform/13100000.ufs/by-name/vendor_boot		flags=backup=1;display="Vendor Boot";flashimg=1
+/vendor_boot	emmc		/dev/block/platform/13100000.ufs/by-name/vendor_boot		flags=backup=1;display="Vendor Boot";flashimg=1
 /vbmeta_samsung	emmc		/dev/block/platform/13100000.ufs/by-name/vbmeta_samsung
 
 # Removable storage
