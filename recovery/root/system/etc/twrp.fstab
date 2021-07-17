@@ -1,9 +1,9 @@
 # mount point	fstype		device	device2				flags
 # Logical partitions
-system		/system		ext4					display="System";logical,first_stage_mount
-vendor		/vendor		ext4					display="Vendor";logical,first_stage_mount
-product		/product	ext4					display="Product";logical,first_stage_mount
-odm		/odm		ext4					display="Odm";logical,first_stage_mount
+system		/system		ext4					wait,logical,first_stage_mount
+vendor		/vendor		ext4					wait,logical,first_stage_mount
+product		/product	ext4					wait,logical,first_stage_mount
+odm		/odm		ext4					wait,logical,first_stage_mount
 
 # Physical partitions
 /metadata	ext4		/dev/block/by-name/metadata		flags=backup=1;display="Metadata";wipeingui

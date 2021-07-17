@@ -36,6 +36,11 @@ on init
     write /proc/sys/kernel/hung_task_timeout_secs 0
     start watchdogd
 
+    # unlink /efs > /mnt/vendor/efs
+    rm /efs
+    mkdir /efs
+    mkdir /sec_efs
+
 # to cut charging battery path
     write /sys/class/power_supply/battery/siop_level 0
 
@@ -47,7 +52,12 @@ on fs
     wait /dev/block/platform/13100000.ufs
     symlink /dev/block/platform/13100000.ufs /dev/block/bootdevice
     symlink /dev/block/platform/13100000.ufs/by-name /dev/block/by-name
+
+#@RECOVERY [For reboot reason.
     symlink /dev/block/platform/13100000.ufs/by-name/param /dev/block/param
+    chown root system /dev/block/param
+    chmod 0666 /dev/block/param
+#]
 
     export ANDROID_ROOT /system_root
 
