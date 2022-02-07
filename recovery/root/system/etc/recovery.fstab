@@ -40,7 +40,7 @@ odm					/odm		ext4	ro,barrier=1		wait,logical,first_stage_mount
 #/dev/block/mmcblk0p1			/sdcard		vfat	defaults		recoveryonly
 /dev/block/by-name/sec_efs		/efs		ext4	defaults		recoveryonly
 /dev/block/by-name/sec_efs		/sec_efs	ext4	defaults		recoveryonly
-/dev/block/by-name/carrier		/carrier	ext4	defaults		recoveryonly
+#/dev/block/by-name/carrier		/carrier	ext4	defaults		recoveryonly
 /dev/block/by-name/hidden		/preload	ext4	defaults		recoveryonly
 /dev/block/by-name/radio		/modem		emmc	defaults		recoveryonly
 
