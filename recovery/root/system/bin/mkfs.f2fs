@@ -1,7 +1,0 @@
-#!/system/bin/sh
-
-DEV=$(echo "$@" | tr ' ' '\n' | grep '/dev')
-MKFS_OPTS="-O project_quota,extra_attr -O casefold -C utf8 -O compression,extra_attr"
-
-echo "Executing /system/bin/__make_f2fs -g android $MKFS_OPTS $DEV"
-/system/bin/__make_f2fs -g android $MKFS_OPTS $DEV
