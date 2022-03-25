@@ -27,17 +27,18 @@
 
 
 #<src>					<mnt_point>	<type>	<mnt_flags and options>	<fs_mgr_flags>
-system					/system		ext4	ro,barrier=1		wait,logical,first_stage_mount
-vendor					/vendor		ext4	ro,barrier=1		wait,logical,first_stage_mount
-product					/product	ext4	ro,barrier=1		wait,logical,first_stage_mount
-odm					/odm		ext4	ro,barrier=1		wait,logical,first_stage_mount
+system					/system		ext4	ro			wait,logical,first_stage_mount
+system					/system		f2fs	ro			wait,logical,first_stage_mount
+vendor					/vendor		ext4	ro			wait,logical,first_stage_mount
+product					/product	ext4	ro			wait,logical,first_stage_mount
+odm					/odm		ext4	ro			wait,logical,first_stage_mount
 
 /dev/block/by-name/boot			/boot		emmc	defaults		recoveryonly
 /dev/block/by-name/recovery		/recovery	emmc	defaults		recoveryonly
 /dev/block/by-name/metadata		/metadata	ext4	defaults		wait,first_stage_mount
 /dev/block/by-name/userdata		/data		f2fs	noatime,nosuid,nodev,discard,usrquota,grpquota,fsync_mode=nobarrier,reserve_root=32768,resgid=5678	recoveryonly,length=-20480
 /dev/block/by-name/cache		/cache		ext4	defaults		recoveryonly
-#/dev/block/mmcblk0p1			/sdcard		vfat	defaults		recoveryonly
+#/dev/block/mmcblk0p1			/sdcard		sdfat	defaults		recoveryonly
 /dev/block/by-name/sec_efs		/efs		ext4	defaults		recoveryonly
 /dev/block/by-name/sec_efs		/sec_efs	ext4	defaults		recoveryonly
 #/dev/block/by-name/carrier		/carrier	ext4	defaults		recoveryonly

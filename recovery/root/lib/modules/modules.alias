@@ -597,6 +597,7 @@ alias usb:v0403p8A98d*dc*dsc*dp*ic*isc*ip*in* ftdi_sio
 alias usb:v0403p7C90d*dc*dsc*dp*ic*isc*ip*in* ftdi_sio
 alias usb:v0403p7C91d*dc*dsc*dp*ic*isc*ip*in* ftdi_sio
 alias usb:v0403p7C92d*dc*dsc*dp*ic*isc*ip*in* ftdi_sio
+alias usb:v0403p7C93d*dc*dsc*dp*ic*isc*ip*in* ftdi_sio
 alias usb:v0403p9090d*dc*dsc*dp*ic*isc*ip*in* ftdi_sio
 alias usb:v0403pFD48d*dc*dsc*dp*ic*isc*ip*in* ftdi_sio
 alias usb:v0403pFD49d*dc*dsc*dp*ic*isc*ip*in* ftdi_sio
@@ -696,6 +697,7 @@ alias usb:v2639p0102d*dc*dsc*dp*ic*isc*ip*in* ftdi_sio
 alias usb:v2639p0101d*dc*dsc*dp*ic*isc*ip*in* ftdi_sio
 alias usb:v2639pD00Dd*dc*dsc*dp*ic*isc*ip*in* ftdi_sio
 alias usb:v2639p0300d*dc*dsc*dp*ic*isc*ip*in* ftdi_sio
+alias usb:v2639p0301d*dc*dsc*dp*ic*isc*ip*in* ftdi_sio
 alias usb:v2639p0200d*dc*dsc*dp*ic*isc*ip*in* ftdi_sio
 alias usb:v0403pD491d*dc*dsc*dp*ic*isc*ip*in* ftdi_sio
 alias usb:v1342p0202d*dc*dsc*dp*ic*isc*ip*in* ftdi_sio
@@ -974,8 +976,12 @@ alias usb:v1C40p0477d*dc*dsc*dp*ic*isc*ip*in* ftdi_sio
 alias usb:v22B7p150Dd*dc*dsc*dp*ic*isc*ip*in01* ftdi_sio
 alias usb:v0403p8348d*dc*dsc*dp*ic*isc*ip*in* ftdi_sio
 alias usb:v0920p7500d*dc*dsc*dp*ic*isc*ip*in* ftdi_sio
+alias usb:v2CAFp13A2d*dc*dsc*dp*ic*isc*ip*in* ftdi_sio
+alias usb:v2CAFp13A3d*dc*dsc*dp*ic*isc*ip*in* ftdi_sio
 alias usb:v1546p0502d*dc*dsc*dp*ic*isc*ip*in* ftdi_sio
 alias usb:v1546p0503d*dc*dsc*dp*ic*isc*ip*in* ftdi_sio
+alias usb:v0403p7150d*dc*dsc*dp*ic*isc*ip*in* ftdi_sio
+alias usb:v0403p7151d*dc*dsc*dp*ic*isc*ip*in* ftdi_sio
 alias usb:v0BDBp*d*dc*dsc*dp*ic02isc0Dip00in* cdc_ncm
 alias usb:v1BC7p0036d*dc*dsc*dp*ic02isc0Dip00in* cdc_ncm
 alias usb:v413Cp81BBd*dc*dsc*dp*ic02isc0Dip00in* cdc_ncm
@@ -1201,6 +1207,7 @@ alias usb:v5372p2303d*dc*dsc*dp*ic*isc*ip*in* pl2303
 alias usb:v03F0p3524d*dc*dsc*dp*ic*isc*ip*in* pl2303
 alias usb:v03F0p4349d*dc*dsc*dp*ic*isc*ip*in* pl2303
 alias usb:v03F0p0F7Fd*dc*dsc*dp*ic*isc*ip*in* pl2303
+alias usb:v03F0p0183d*dc*dsc*dp*ic*isc*ip*in* pl2303
 alias usb:v03F0p0B39d*dc*dsc*dp*ic*isc*ip*in* pl2303
 alias usb:v03F0p4439d*dc*dsc*dp*ic*isc*ip*in* pl2303
 alias usb:v03F0p3139d*dc*dsc*dp*ic*isc*ip*in* pl2303
@@ -1213,6 +1220,7 @@ alias usb:v04B8p0522d*dc*dsc*dp*ic*isc*ip*in* pl2303
 alias usb:v054Cp0437d*dc*dsc*dp*ic*isc*ip*in* pl2303
 alias usb:v11ADp0001d*dc*dsc*dp*ic*isc*ip*in* pl2303
 alias usb:v0B63p6530d*dc*dsc*dp*ic*isc*ip*in* pl2303
+alias usb:v0B63p653Ad*dc*dsc*dp*ic*isc*ip*in* pl2303
 alias usb:v0B8Cp2303d*dc*dsc*dp*ic*isc*ip*in* pl2303
 alias usb:v0CAAp3001d*dc*dsc*dp*ic*isc*ip*in* pl2303
 alias of:N*T*Cdebug-snapshot,qdump debug_snapshot_qd
@@ -1292,6 +1300,7 @@ alias of:N*T*Csamsung,exynos-ufsC* ufs_exynos_core
 alias of:N*T*Csamsung,exynos-tmu-v2 exynos_thermal
 alias of:N*T*Csamsung,exynos-tmu-v2C* exynos_thermal
 alias platform:s2mps24-regulator s2mps24_regulator
+alias usbfunc:ss_mon usb_f_ss_mon_gadget
 alias of:N*T*Csamsung,usb-notifier usb_notifier
 alias of:N*T*Csamsung,usb-notifierC* usb_notifier
 alias of:N*T*Ccirrus,cs35l40 snd_soc_cs35l41_i2c
@@ -1339,8 +1348,6 @@ alias i2c:wacom_w90xx w9020
 alias of:N*T*Csamsung,exynos2100-clock clk_exynos
 alias of:N*T*Csamsung,exynos2100-clockC* clk_exynos
 alias usbfunc:dm usb_f_dm
-alias of:N*T*Csamsung,exynos-perf exynos_perf
-alias of:N*T*Csamsung,exynos-perfC* exynos_perf
 alias spi:spidev spidev
 alias of:N*T*Crohm,dh2228fv spidev
 alias of:N*T*Crohm,dh2228fvC* spidev
@@ -1378,6 +1385,8 @@ alias of:N*T*Camlogic,meson-gxl-dwc3 dwc3_of_simple
 alias of:N*T*Camlogic,meson-gxl-dwc3C* dwc3_of_simple
 alias of:N*T*Callwinner,sun50i-h6-dwc3 dwc3_of_simple
 alias of:N*T*Callwinner,sun50i-h6-dwc3C* dwc3_of_simple
+alias of:N*T*Chisilicon,hi3670-dwc3 dwc3_of_simple
+alias of:N*T*Chisilicon,hi3670-dwc3C* dwc3_of_simple
 alias of:N*T*Csamsung,exynos-is-actuator-ak737x is_actuator_ak737x
 alias of:N*T*Csamsung,exynos-is-actuator-ak737xC* is_actuator_ak737x
 alias of:N*T*Csamsung,exynos-pd exynos_pd
@@ -1429,6 +1438,8 @@ alias of:N*T*Csamsung,freq-qos-tracerC* freq_qos_tracer
 alias of:N*T*Csamsung,exynos-cp-shmem shm_ipc
 alias of:N*T*Csamsung,exynos-cp-shmemC* shm_ipc
 alias platform:exynos-reboot exynos_reboot
+alias of:N*T*Csamsung,exynos-perf xperf
+alias of:N*T*Csamsung,exynos-perfC* xperf
 alias of:N*T*Csamsung,exynos-gpu-profiler exynos_gpu_profiler
 alias of:N*T*Csamsung,exynos-gpu-profilerC* exynos_gpu_profiler
 alias of:N*T*Csamsung,audio-debug sec_audio_debug
@@ -1453,6 +1464,9 @@ alias usb:v0424p274Ed*dc*dsc*dp*ic*isc*ip*in* cdc_acm
 alias usb:v076Dp0006d*dc*dsc*dp*ic*isc*ip*in* cdc_acm
 alias usb:v17EFp7000d*dc*dsc*dp*ic*isc*ip*in* cdc_acm
 alias usb:v0870p0001d*dc*dsc*dp*ic*isc*ip*in* cdc_acm
+alias usb:v045Bp023Cd*dc*dsc*dp*ic*isc*ip*in* cdc_acm
+alias usb:v045Bp0248d*dc*dsc*dp*ic*isc*ip*in* cdc_acm
+alias usb:v045Bp024Dd*dc*dsc*dp*ic*isc*ip*in* cdc_acm
 alias usb:v0E8Dp0003d*dc*dsc*dp*ic*isc*ip*in* cdc_acm
 alias usb:v0E8Dp2000d*dc*dsc*dp*ic*isc*ip*in* cdc_acm
 alias usb:v0E8Dp3329d*dc*dsc*dp*ic*isc*ip*in* cdc_acm
@@ -1552,8 +1566,12 @@ alias usb:v03EBp0030d*dc*dsc*dp*ic*isc*ip*in* cdc_acm
 alias usb:v04D8p000Bd*dc*dsc*dp*ic*isc*ip*in* cdc_acm
 alias usb:v04E8p685Dd*dc*dsc*dp*ic*isc*ip*in* cdc_acm
 alias usb:v058Bp0041d*dc*dsc*dp*ic*isc*ip*in* cdc_acm
+alias usb:v108Cp0159d*dc*dsc*dp*ic*isc*ip*in* cdc_acm
+alias usb:v108Cp0168d*dc*dsc*dp*ic*isc*ip*in* cdc_acm
+alias usb:v108Cp0169d*dc*dsc*dp*ic*isc*ip*in* cdc_acm
 alias usb:v1BC7p0021d*dc*dsc*dp*ic*isc*ip*in* cdc_acm
 alias usb:v1BC7p0023d*dc*dsc*dp*ic*isc*ip*in* cdc_acm
+alias usb:v27C6p5395d*dc*dsc*dp*ic*isc*ip*in* cdc_acm
 alias usb:v*p*d*dc*dsc*dp*ic02isc02ip00in* cdc_acm
 alias usb:v*p*d*dc*dsc*dp*ic02isc02ip01in* cdc_acm
 alias usb:v*p*d*dc*dsc*dp*ic02isc02ip02in* cdc_acm
@@ -1619,5 +1637,6 @@ alias of:N*T*Csamsung,exynos8-rtc rtc_s3c
 alias of:N*T*Csamsung,exynos8-rtcC* rtc_s3c
 alias of:N*T*Csamsung,hardlockup-watchdog hardlockup_watchdog
 alias of:N*T*Csamsung,hardlockup-watchdogC* hardlockup_watchdog
+alias ssg ssg_iosched
 alias of:N*T*Csamsung,exynos-dsp dsp
 alias of:N*T*Csamsung,exynos-dspC* dsp

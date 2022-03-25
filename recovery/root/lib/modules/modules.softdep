@@ -1,6 +1,7 @@
 # Soft dependencies extracted from modules themselves.
 softdep exynos_pd_el3 pre: exynos-el2
 softdep sec_hard_reset_hook pre: pinctrl-samsung-core
+softdep mali_kbase pre: memory_group_manager
 softdep mali_kbase pre: exynos-acme
 softdep dpu pre: cmupmucal clk_exynos exynos-pmu-if pinctrl-samsung-core fb phy-exynos-mipi exynos-pd exynos-pd-dbg samsung-iommu
 softdep softdog pre: s3c2410_wdt

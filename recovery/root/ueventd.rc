@@ -1,4 +1,4 @@
-firmware_directories /etc/firmware/ /odm/firmware/ /vendor/firmware/ /firmware/image/ /spu/
+firmware_directories /etc/firmware/ /odm/firmware/ /vendor/firmware/ /firmware/image/ /spu/ /vendor/firmware/wifi/
 uevent_socket_rcvbuf_size 16M
 
 subsystem graphics
@@ -79,6 +79,3 @@ subsystem sound
 
 # USB 
 /dev/ttyGS*                 0660   system       system
-
-# tzic driver
-/dev/tzic             0660   system     net_bt_admin
