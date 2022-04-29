@@ -25,7 +25,7 @@ resize_vendor() {
 
   echo " - Unmounting /vendor..."
   umount /vendor
-  echo " - Checking vendor block parition before resizing..."
+  echo " - Checking vendor block partition before resizing..."
   e2fsck -f $dm_block
   echo " - Resizing the filesystem on $dm_block..."
   resize2fs $dm_block
@@ -42,7 +42,7 @@ vendor_free_size_check() {
     echo " -     ...succeeded."
     rm -f /vendor/test
   else
-    echo " -     ...No free space left on vendor, attempt to resizing vendor..."
+    echo " -     ...No free space left on vendor, attempting to resize vendor..."
     echo " "
     rm -f /vendor/test
     resize_vendor
