@@ -72,6 +72,7 @@ subsystem sound
 /sys/devices/platform/trusty.*      trusty_version        0440  root   log
 /dev/input/event* 0660 system input
 /sys/devices/virtual/input/input*   enable      0660  system   input
+/sys/devices/virtual/input/input*   enable2     0660  system   input
 /sys/devices/virtual/input/input*   poll_delay  0660  system   input
 /sys/devices/virtual/usb_composite/*   enable      0664  root   system
 /sys/devices/system/cpu/cpu*   cpufreq/scaling_max_freq   0664  system system

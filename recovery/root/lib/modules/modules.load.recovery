@@ -233,7 +233,7 @@ if_cb_manager.ko
 pdic_notifier_module.ko
 cs40l2x_vib.ko
 s2dos05-regulator.ko
-pca9468_charger.ko
+pca9468-charger.ko
 hall_ic.ko
 abc.ko
 abc_hub.ko
