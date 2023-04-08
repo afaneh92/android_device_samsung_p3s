@@ -2,6 +2,7 @@
 # Logical partitions
 system		/system		ext4						wait,logical,first_stage_mount
 system		/system		f2fs						wait,logical,first_stage_mount
+system		/system		erofs						wait,logical,first_stage_mount
 vendor		/vendor		ext4						wait,logical,first_stage_mount
 product		/product	ext4						wait,logical,first_stage_mount
 odm		/odm		ext4						wait,logical,first_stage_mount
