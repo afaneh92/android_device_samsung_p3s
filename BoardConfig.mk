@@ -150,3 +150,8 @@ TW_BACKUP_EXCLUSIONS := /data/fonts
 TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD := true
 TW_USE_SAMSUNG_HAPTICS := true
+
+# PBRP Stuff 
+PB_DISABLE_DEFAULT_DM_VERITY := true 
+PB_TORCH_PATH := "/sys/class/leds/torch-sec1/brightness" 
+PB_TORCH_MAX_BRIGHTNESS := 2
